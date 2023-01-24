@@ -62,7 +62,11 @@ let tab = document.getElementsByClassName("tab-title");
 console.log(tab);
 for(let i=0;i<tab.length;i++){
 	if(tab[i].innerText == day){
-		tab[i].parentElement.parentElement.classList.add("active");
+		console.log(tab[i])
+		tab[i].parentElement.classList.add("active");
+	}
+	else {
+		tab[i].parentElement.classList.remove("active");
 	}
 }
 </script>
