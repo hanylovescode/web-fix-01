@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Schedule Fix</title>
+</head>
+<body>
+	<ul class="tabs mb64 mb-xs-24">
+				
+				
+		<li class="active">
+			<div class="tab-title">
+				<span>Monday</span>
+			</div>
+			
+		</li>
+	
+		<li class="">
+			<div class="tab-title">
+				<span>Tuesday</span>
+			</div>
+			
+		</li>
+	
+		<li class="">
+			<div class="tab-title">
+				<span>Wednesday</span>
+			</div>
+			
+		</li>
+	
+		<li class="">
+			<div class="tab-title">
+				<span>Thursday</span>
+			</div>
+			
+		</li>
+	
+		<li class="">
+			<div class="tab-title">
+				<span>Friday</span>
+			</div>
+			
+		</li>
+	
+		<li class="">
+			<div class="tab-title">
+				<span>Saturday</span>
+			</div>
+			
+		</li>
+			
+</ul>
+<script>
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const d = new Date();
+let day = weekday[d.getDay()];
+console.log(day);
+let tab = document.getElementsByClassName("tab-title");
+console.log(tab);
+for(let i=0;i<tab.length;i++){
+	if(tab[i].innerText == day){
+		tab[i].parentElement.parentElement.classList.add("active");
+	}
+}
+</script>
+</body>
+</html>
